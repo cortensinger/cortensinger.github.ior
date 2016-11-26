@@ -73,12 +73,16 @@ app.get('/prev_night', function(req, res){
 
 var sensorReading="not yet available";
 
+//============================================================== 
+//==============================================================
+//============================================================== 
 // Set Up HTTP Server
 app.set('views', __dirname + '/views');
 
 app.set('view engine', 'jade');
 app.use(express.static(__dirname + '/assets'));
-app.get('/', function(req, res){
+//app.get('/', function(req, res){
+app.get('http://cortensinger.github.io', function(req, res){
   //render the index.jade template
   //don't provide variables - we'll use socket.io for that
   res.render('index');
@@ -89,7 +93,9 @@ var server = app.listen(3000, function() {
 	console.log("hi");	
 });
 var io = require('socket.io').listen(server);
-
+//============================================================== 
+//============================================================== 
+//============================================================== 
 
 function sendData(type) {
 	console.log("received value: "+data);

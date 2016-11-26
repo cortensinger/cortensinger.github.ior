@@ -1,4 +1,5 @@
-var socket = io.connect('http://localhost:3000');
+//var socket = io.connect('http://localhost:3000');
+var socket = io.connect('http://cortensinger.github.io'); 
 
 // when a "sensorReading" message comes through, show its value by
 // writing the text of the div with id=showValue
