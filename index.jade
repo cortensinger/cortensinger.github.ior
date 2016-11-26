@@ -1,20 +1,22 @@
-doctype html
-html(lang="en")
-  head
-    title Delirium Prevention
-    script(src='/socket.io/socket.io.js')
-    script(src='http://code.jquery.com/jquery-1.10.1.min.js')
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
-    script(src='/js/script.js')
-  body
-    h1 IDD: Delirium Prevention
-    h3 Log of Sensor Data
-      #noise Noise:
-      #noise-val None
-      #light Light:
-      #light-val None
-      #movement Movement:
-      #movement-val None
-    #button
-    #button2
-    //img(id='yo', src='/img/yo.png')
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Delirium Prevention</title>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script><link rel="stylesheet" type="text/css" href="css/style.css" />
+    <script src="/js/script.js"></script>
+  </head>
+  <body>
+    <h1>IDD: Delirium Prevention</h1>
+    <h3>Log of Sensor Data
+      <div id="noise">Noise:</div>
+      <div id="noise-val">None</div>
+      <div id="light">Light:</div>
+      <div id="light-val">None</div>
+      <div id="movement">Movement:</div>
+      <div id="movement-val">None</div>
+    </h3>
+    <div id="button"></div>
+    <div id="button2"></div>
+  </body>
+</html>
