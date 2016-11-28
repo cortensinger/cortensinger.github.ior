@@ -1,20 +1,111 @@
 doctype html
 html(lang="en")
   head
-    title Delirium Prevention
+    link(href='http://s3.amazonaws.com/codecademy-content/courses/ltp2/css/bootstrap.min.css', rel='stylesheet')
+    link(href='http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css', rel='stylesheet')
+    link(rel='stylesheet', href='http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css')
+    link(rel='stylesheet', href='/css/style.css', type='text/css')
+    
+    link(href='http://fonts.googleapis.com/css?family=Raleway', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Walter+Turncoat', rel='stylesheet', type='text/css')
+
+    title Delirium Reduction
     script(src='/socket.io/socket.io.js')
     script(src='http://code.jquery.com/jquery-1.10.1.min.js')
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
     script(src='/js/script.js')
   body
-    h1 IDD: Delirium Prevention
-    h3 Log of Sensor Data
+    .nav
+      .container
+        a(href='#')
+          img(width='40', src='brain.png')
+        ul.pull-left
+          li
+            a(href='http://delirium.ucsf.edu/education') UCSF Campaign
+        ul.pull-right
+          li
+            p Passive ▾
+            .drop
+              .d2
+                ul.items2
+                  li
+                    a(href='#cur') Current Activity
+                  li
+                    a(href='#rec') Past Activity
+          li
+            p Active ▾
+            .drop
+              .d3
+                ul.items3
+                  li
+                    a(href='#nur') Contact Nurse
+                  li
+                    a(href='#') Send Audio Msg
+
+
+
+    // First Third 
+    .jumbotron
+      .words
+        .idea
+          h1  Delirium Reduction 
+          p
+            | Statement of Our Mission: Assist nursing staff in reducing symptoms of delirium in patients while allowing loved ones to monitor their condition online. Statement of Our Mission: Assist nursing staff in reducing symptoms of delirium in patients while allowing loved ones to monitor their condition online.
+    
+      a(href='#cur')
+        #current Current Activity
+      a(href='#rec')
+        #recent Past Activity
+    
+  #cur
+
+  .wumbo
+    .vals
+      h1#nur Current Activity
+      .gramps
+        img(id='gpa', width='150', src='/grandpa.png')
+        h2 Ol' Grandpa Jenkins
+        p UCSF Medical Center
+        p 2nd Week in Hospital
+        p 3.5 Weeks Remaining
+      .nurse
+        img(width='150', src='/nurse.png')
+        h2 Nurse Nursington
+        p Phone: 1 (555) 123 - 4567
+        p Email: nurse_r1973@hotmail.com
+        p Pager: +1 248 1234567
+     
+    .sensors   
       #noise Noise:
       #noise-val None
       #light Light:
       #light-val None
       #movement Movement:
       #movement-val None
-    #button
-    #button2
-    //img(id='yo', src='/img/yo.png')
+    
+    .buttons
+      #button2
+      #button3
+
+    .nothing1
+
+  #rec
+
+  .dumbo
+    .logtitle
+      h1 Past Activity
+      .gramps1
+        img(id='gpa', width='150', src='/grandpa.png')
+        h2 Ol' Grandpa Jenkins
+        p UCSF Medical Center
+        p 2nd Week in Hospital
+        p 3.5 Weeks Remaining
+    .logholder
+      .log1
+        h2 Sa (11/26/16):
+        img(id='saturday', width='600', src='/graph.png')
+      .log2
+        h2 Su (11/27/16):
+        img(id='sunday', width='600', src='/graph.png')
+
+  .nothing2
